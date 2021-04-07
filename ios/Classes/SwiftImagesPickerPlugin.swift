@@ -35,6 +35,7 @@ public class SwiftImagesPickerPlugin: NSObject, FlutterPlugin {
       let config = ZLPhotoConfiguration.default();
       self.setConfig(configuration: config, pickType: pickType);
       config.maxSelectCount = count;
+      config.maxSelectVideoDuration = 4 * 60 * 60;
       config.allowSelectGif = supportGif;
       if cropOption != nil {
         config.allowEditImage = true;
